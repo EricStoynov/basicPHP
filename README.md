@@ -7,3 +7,4 @@ Hopefully this helps more people than just me.
 
 # Sources:
  - [Youtube Video](https://www.youtube.com/watch?v=hQPBeS4xlxg) and their [code](https://github.com/Rijushree123/Youtube-V/tree/main/phptut)
+ - [Youtube Video 2](https://www.youtube.com/watch?v=rHs0b2MaNpg) and their [code](https://github.com/francis-njenga/login-form-with-database-connection)
