@@ -5,7 +5,7 @@ session_start();
 	include("functions.php");
 
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
-        $user_email = $_POST['user_email']; //Unused
+        $user_email = $_POST['user_email'];
 		$user_name = $_POST['user_name'];
 		$user_pass = $_POST['user_pass'];
 
