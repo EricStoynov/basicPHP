@@ -14,7 +14,7 @@ In my case, I am using XAMPP, the process is near-identical if you are using php
 2) Make a database that coresponds to the name you set in the above-mentioned file ($dbname)
 3) Inside that database, add a table named 'userdata'
 4) Add a table with the following:
- - user_id (Make this AI or auto-indexing!)
+ - user_id (Make this AI or auto-incrementing!)
  - user_name
  - user_email
  - user-pass
