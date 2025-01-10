@@ -1,7 +1,7 @@
 <?php
     $dbhost = "localhost";
-    $dbuser = "root";
-    $dbpass = "4522";
+    $dbuser = "username"; //Generally root by default
+    $dbpass = "password";
     $dbname = "data";
     $dbport = 3306; //3306 by default
 
