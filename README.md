@@ -25,3 +25,6 @@ In my case, I am using XAMPP, the process is near-identical if you are using php
  - [Youtube Video](https://www.youtube.com/watch?v=hQPBeS4xlxg) and their [code](https://github.com/Rijushree123/Youtube-V/tree/main/phptut)
  - [Youtube Video 2](https://www.youtube.com/watch?v=rHs0b2MaNpg) and their [code](https://github.com/francis-njenga/login-form-with-database-connection)
  - [Youtube Video 3](https://www.youtube.com/watch?v=WYufSGgaCZ8&t=208s) and their [code](https://drive.google.com/file/d/15ZrwKt7D891-5V3tzNH8XzOTA7cfFQPH/view)
+
+To do:
+- Add Password hashing: [Ex](https://www.geeksforgeeks.org/how-to-encrypt-and-decrypt-passwords-using-php/)
