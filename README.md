@@ -4,6 +4,7 @@
 # What?
 Often times I am stuck making a site with PHP and a log-in system.
 Hopefully this helps more people than just me.
+This includes an account creation system with basic moderation features, allowing users to change their balance.
 
 # Why?
 By the time I get a basic PHP log-in system and get it up to my standards, I've usually wasted a significant amount of time.
