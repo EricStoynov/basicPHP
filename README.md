@@ -6,7 +6,7 @@ Often times I am stuck making a site with PHP and a log-in system.
 Hopefully this helps more people than just me.
 
 # Why?
-By the time I get a basic PHP log-in system and get it up to my standarts, I've usually wasted a significant amount of time.
+By the time I get a basic PHP log-in system and get it up to my standards, I've usually wasted a significant amount of time.
 
 # How?
 In my case, I am using XAMPP, the process is near-identical if you are using phpMyAdmin alone.
@@ -17,9 +17,15 @@ In my case, I am using XAMPP, the process is near-identical if you are using php
  - user_id (Make this AI or auto-incrementing!)
  - user_name
  - user_email
- - user-pass
+ - user_pass
  - user_bal
- - user_creation (Set this as a date)
+ - user_creation (Make this Date/Time)
+ - user_lastlog (Make this Time Stamp)
+ - user_favgame
+ - tier
+ - user_suspended (Make this 0 by default)
+ - user_lastIP
+ - user_streak
 
 # Sources:
  - [Youtube Video](https://www.youtube.com/watch?v=hQPBeS4xlxg) and their [code](https://github.com/Rijushree123/Youtube-V/tree/main/phptut)
