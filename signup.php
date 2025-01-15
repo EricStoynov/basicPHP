@@ -1,8 +1,9 @@
 <?php 
 session_start();
-
 	include("connection.php");
 	include("functions.php");
+
+    check_login2($con);
 
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $user_email = $_POST['user_email'];
@@ -18,11 +19,10 @@ session_start();
 		if (!empty($user_name) && !empty($user_pass) && !is_numeric($user_name)) {
             if ($query2_result && mysqli_num_rows($query2_result) <= 0) {
                 if ($query3_result && mysqli_num_rows($query3_result) <= 0) {
-                    //$user_id = random_num(32);
                     $user_bal = 0;
                     $user_creation = date('Y-m-d H:i:s');
-                    //$query = "insert into userdata (user_id,user_name,user_email,user_pass,user_bal,user_creation) values ('$user_id','$user_name','$user_email','$user_pass', '$user_bal','$user_creation')";
-                    $query = "insert into userdata (user_name,user_email,user_pass,user_bal,user_creation) values ('$user_name','$user_email','$user_pass', '$user_bal','$user_creation')";
+                    $user_lastIP = $_SERVER['HTTP_CLIENT_IP'];
+                    $query = "insert into userdata (user_name,user_email,user_pass,user_bal,user_creation,user_lastIP) values ('$user_name','$user_email','$user_pass', '$user_bal','$user_creation','$user_lastIP')";
 
                     mysqli_query($con, $query);
 
@@ -52,9 +52,7 @@ session_start();
             <input id="user_name" type="text" name="user_name" placeholder="Username"><br><br>
             <input id="user_email" type="email" name="user_email" placeholder="E-Mail"><br><br>
             <input id="user_pass" type="password" name="user_pass" placeholder="Password"><br><br>
-
             <input id="submit" type="submit" name="Login"><br><br>
-
             <a href="login.php">Click to Login.</a>
 		</form>
 	</div>
