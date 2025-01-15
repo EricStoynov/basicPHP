@@ -4,6 +4,8 @@ session_start();
 	include("connection.php");
 	include("functions.php");
 
+	check_login2($con);
+
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$user_pass = $_POST['user_pass'];
 
@@ -19,20 +21,26 @@ session_start();
 						$user_data = mysqli_fetch_assoc($query_result);
 						
 						if($user_data['user_pass'] === $user_pass) {
-	
-							$_SESSION['user_id'] = $user_data['user_id'];
-							header("Location: index.php");
-							die;
+							if (!$user_data['user_suspended']) {
+								$_SESSION['user_id'] = $user_data['user_id'];
+								header("Location: index.php");
+								die;
+							} else {
+								echo "Account suspended!";
+							}
+						} else {
+							echo "wrong password!";
 						}
 					}
 				}
-				echo "wrong username or password!";
+				if ($_SESSION && $_SESSION && in_array('user_id', $_SESSION)) {echo "wrong username or password!";} else {}
+				
 			} else {
-				echo "wrong username or password!";
+				if ($_SESSION && $_SESSION && in_array('user_id', $_SESSION)) {echo "wrong username or password!";} else {}
 			}
 		} else {
 			$user_email = $_POST['user_email'];
-			if(!empty($user_email) && !empty($user_pass)) {
+			if(!empty($user_email) && !empty($user_pass) && !is_numeric($user_email)) {
 				$query = "select * from userdata where user_email = '$user_email' limit 1";
 				$query_result = mysqli_query($con, $query);
 			
@@ -42,16 +50,22 @@ session_start();
 						$user_data = mysqli_fetch_assoc($query_result);
 						
 						if($user_data['user_pass'] === $user_pass) {
-			
-							$_SESSION['user_id'] = $user_data['user_id'];
-							header("Location: index.php");
-							die;
+							if (!$user_data['user_suspended']) {
+								$_SESSION['user_id'] = $user_data['user_id'];
+								header("Location: index.php");
+								die;
+							} else {
+								echo "Account suspended!";
+							}
+						} else {
+							echo "wrong password!";
 						}
 					}
 				}
-				echo "wrong username or password!";
+				if ($_SESSION && $_SESSION && in_array('user_id', $_SESSION)) {echo "wrong username or password!";} else {}
+				
 			} else {
-				echo "wrong username or password!";
+				if ($_SESSION && $_SESSION && in_array('user_id', $_SESSION)) {echo "wrong username or password!";} else {}
 			}
 		}
 
